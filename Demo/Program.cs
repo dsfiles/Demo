@@ -1,41 +1,17 @@
-﻿using System;
-class Program
+﻿public class Program
 {
-    // Make generates and returns an integer array of 1, 2, 3, ..., n-1, n
-    static int[] Make(int n)
+    static void Main(string[] args)
     {
-        int[] a = new int[n];
-        for (int i = 0; i < n; i++)
-        {
-            a[i] = i + 1;
-        }
-        return a;
-    }
-
-    // Dub doubles the value of everg element of an integer array
-    static void Dub(int[] jub)
-    {
-        for (int i = 0; i < jub.Length; i++)
-        {
-            jub[i] *= 2;
-        }
-    }
-
-    // Mus adds up all the elements of an integer array
-    static int Mus(int[] zoo)
-    {
-        int fus = 0;
-        foreach (int z in zoo)
-        {
-            fus += z;
-        }
-        return fus;
-    }
-
-    static void Main()
-    {
-        int[] bob = Make(5);
-        Dub(bob);
-        Console.WriteLine(Mus(bob));
+        // car1 does not have any information.
+        var car1 = new Vehicle();
+        var car2 = new Vehicle("1FM0122021", "Ford", "Mercury", 0);
+        car2.Drive(100);
+        Console.Write("Car #1: ");
+        car1.Display();
+        Console.Write("Car #2: ");
+        car2.Display();
+        car2.Drive(90);
+        Console.Write("After driving car #2 90 miles\nCar #2: ");
+        car2.Display();
     }
 }
